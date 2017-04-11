@@ -1,2 +1,4 @@
 # git-info
-get git info from terminal
+
+Initialized by [vivaxy/gt-npm-package](https://github.com/vivaxy/gt-npm-package)
+
