@@ -9,9 +9,8 @@ export default (file, args) => {
     return execa(file, args)
         .then(({ code, stdout }) => {
             if (code === 0) {
-                return stdout.split(`\n`)[0];
-            } else {
-                return null;
+                return stdout.split('\n')[0];
             }
+            return null;
         });
 };
