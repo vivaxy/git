@@ -4,7 +4,7 @@
  */
 import betterExeca from '../helpers/better-execa';
 
-export default async function checkClean({
+export default async function isClean({
   cwd,
 }: {
   cwd: string;

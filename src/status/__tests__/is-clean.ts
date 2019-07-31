@@ -5,7 +5,7 @@
 import * as path from 'path';
 import * as fse from 'fs-extra';
 import * as execa from 'execa';
-import checkClean from '../check-clean';
+import isClean from '../is-clean';
 
 const wd = path.join(__dirname, 'fixtures', 'git-repo');
 
@@ -19,14 +19,14 @@ afterAll(async function() {
 });
 
 test('should be clean', async function() {
-  const clean = await checkClean({ cwd: wd });
+  const clean = await isClean({ cwd: wd });
   expect(clean).toBe(true);
 });
 
 test('should not be clean', async function() {
   const testFilePath = path.join(wd, 'a.js');
   await fse.outputFile(testFilePath, '0');
-  const clean = await checkClean({ cwd: wd });
+  const clean = await isClean({ cwd: wd });
   await fse.remove(testFilePath);
   expect(clean).toBe(false);
 });
