@@ -1,5 +1,5 @@
 {
-  "name": "@vivaxy/git-info",
+  "name": "@vivaxy/git",
   "version": "0.1.1",
   "description": "Created by create-n",
   "main": "lib/index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vivaxy/git-info.git"
+    "url": "git+https://github.com/vivaxy/git.git"
   },
   "author": "vivaxy <xyxuye2007@126.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vivaxy/git-info/issues"
+    "url": "https://github.com/vivaxy/git/issues"
   },
-  "homepage": "https://github.com/vivaxy/git-info#readme",
+  "homepage": "https://github.com/vivaxy/git#readme",
   "lint-staged": {
     "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
       "prettier --write",
@@ -55,7 +55,6 @@
     "git",
     "node",
     "npm",
-    "git-info",
     "node.js"
   ]
 }
