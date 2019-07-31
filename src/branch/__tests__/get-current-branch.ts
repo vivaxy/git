@@ -5,7 +5,7 @@
 import * as path from 'path';
 import * as execa from 'execa';
 import * as fse from 'fs-extra';
-import getCurrentBranch from '../get-current';
+import getCurrentBranch from '../get-current-branch';
 
 const wd = path.join(__dirname, 'fixtures', 'git-repo');
 

@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 import * as path from 'path';
-import getAllSubmodules from '../get-all';
+import getAllSubmodules from '../get-all-submodules';
 
 const projectBase = path.join(__dirname, '..', '..', '..');
 

@@ -4,7 +4,7 @@
  */
 import betterExeca from '../helpers/better-execa';
 
-export default async function checkGitClean({
+export default async function checkClean({
   cwd,
 }: {
   cwd: string;
