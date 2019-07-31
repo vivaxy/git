@@ -56,5 +56,10 @@
     "node",
     "npm",
     "node.js"
-  ]
+  ],
+  "dependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "execa": "^2.0.3",
+    "fs-extra": "^8.1.0"
+  }
 }
