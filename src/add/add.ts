@@ -2,8 +2,7 @@
  * @since 2019-07-31 14:37
  * @author vivaxy
  */
-import * as execa from 'execa';
-import { Stdio } from '../helpers';
+import { Stdio, betterExeca } from '../helpers';
 
 export default async function add({
   cwd,
@@ -12,5 +11,5 @@ export default async function add({
   cwd: string;
   stdio?: Stdio;
 }): Promise<void> {
-  await execa('git', ['add', '.'], { stdio, cwd });
+  await betterExeca('git', ['add', '.'], { stdio, cwd });
 }

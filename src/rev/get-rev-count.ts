@@ -2,7 +2,7 @@
  * @since 2019-06-27 11:06
  * @author vivaxy
  */
-import * as execa from 'execa';
+import { betterExeca } from '../helpers';
 
 export default async function getRevCount({
   from,
@@ -19,7 +19,7 @@ export default async function getRevCount({
   if (!from) {
     sha = to;
   }
-  const { exitCode, stdout } = await execa(
+  const { exitCode, stdout } = await betterExeca(
     'git',
     ['rev-list', '--count', sha, paths],
     { cwd },

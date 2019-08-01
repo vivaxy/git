@@ -2,8 +2,7 @@
  * @since 2016-11-27 20:07
  * @author vivaxy
  */
-import * as execa from 'execa';
-import { Stdio } from '../helpers';
+import { Stdio, betterExeca } from '../helpers';
 
 export default async function fetch({
   cwd,
@@ -12,7 +11,7 @@ export default async function fetch({
   cwd: string;
   stdio?: Stdio;
 }) {
-  return await execa('git', ['fetch', '-p'], {
+  return await betterExeca('git', ['fetch', '-p'], {
     stdio,
     cwd,
   });
