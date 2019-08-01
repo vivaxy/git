@@ -37,6 +37,9 @@
     "preset": "ts-jest",
     "collectCoverageFrom": [
       "src/**/*.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "scripts/test/setup-file-after-env.js"
     ]
   },
   "devDependencies": {
