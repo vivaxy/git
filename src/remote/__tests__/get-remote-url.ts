@@ -3,12 +3,26 @@
  * @author vivaxy
  */
 import * as path from 'path';
+import * as fse from 'fs-extra';
+import * as execa from 'execa';
 import getRemoteUrl from '../get-remote-url';
 
-const projectBasePath = path.join(__dirname, '..', '..', '..');
+const wd = path.join(__dirname, 'fixtures', 'get-remote-url');
+
+beforeAll(async function() {
+  await fse.ensureDir(wd);
+  await execa('git', ['clone', 'https://github.com/vivaxy/git.git'], {
+    cwd: wd,
+  });
+});
+
+afterAll(async function() {
+  await fse.remove(wd);
+});
 
 test('get remote url', async function() {
-  expect(await getRemoteUrl({ cwd: projectBasePath, remote: 'origin' })).toBe(
-    'git@github.com:vivaxy/git.git',
+  const gitRepoPath = path.join(wd, 'git');
+  expect(await getRemoteUrl({ cwd: gitRepoPath, remote: 'origin' })).toBe(
+    'https://github.com/vivaxy/git.git',
   );
 });
