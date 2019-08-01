@@ -4,3 +4,4 @@
  */
 export { default as isClean } from './is-clean';
 export { default as isRepositoryRoot } from './is-repository-root';
+export { default as getHeadCommit } from './get-head-commit';
