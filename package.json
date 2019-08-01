@@ -39,7 +39,7 @@
       "src/**/*.ts"
     ],
     "setupFilesAfterEnv": [
-      "scripts/test/setup-file-after-env.js"
+      "./scripts/test/setup-file-after-env.js"
     ]
   },
   "devDependencies": {
