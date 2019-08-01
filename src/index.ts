@@ -1,6 +1,7 @@
 export * from './add';
 export * from './branch';
 export * from './commit';
+export * from './config';
 export * from './fetch';
 export * from './push';
 export * from './remote';

@@ -3,3 +3,4 @@
  * @author vivaxy
  */
 export { default as getCurrentRemote } from './get-current-remote';
+export { default as getRemoteUrl } from './get-remote-url';
