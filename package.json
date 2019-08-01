@@ -1,6 +1,6 @@
 {
   "name": "@vivaxy/git",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Created by create-n",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
