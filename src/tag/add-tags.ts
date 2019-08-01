@@ -6,10 +6,13 @@ import * as execa from 'execa';
 import { Stdio } from '../helpers';
 
 export default async function addTags(
-  tags: string[],
+  tags: {
+    tag: string;
+    message: string;
+  }[],
   { cwd, stdio = 'inherit' }: { cwd: string; stdio?: Stdio },
 ) {
-  for (const tag of tags) {
-    await execa('git', ['tag', tag], { stdio, cwd });
+  for (const { tag, message } of tags) {
+    await execa('git', ['tag', tag, '-m', message], { stdio, cwd });
   }
 }
