@@ -3,3 +3,4 @@
  * @author vivaxy
  */
 export { default as commit } from './commit';
+export { default as getPreviousCommit } from './get-previous-commit';
