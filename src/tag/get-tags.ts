@@ -5,12 +5,20 @@
 import { betterExeca } from '../helpers';
 
 export default async function getTags({
+  match = '*',
+  sort = 'refname',
   cwd,
 }: {
+  sort?: string;
+  match?: string;
   cwd: string;
 }): Promise<string[]> {
   try {
-    const { stdout } = await betterExeca('git', ['tag'], { cwd });
+    const { stdout } = await betterExeca(
+      'git',
+      ['tag', '--list', match, `--sort=${sort}`],
+      { cwd },
+    );
     return stdout.split('\n');
   } catch (e) {
     return [];

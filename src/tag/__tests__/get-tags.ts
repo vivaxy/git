@@ -9,6 +9,5 @@ const projectBase = path.join(__dirname, '..', '..', '..');
 
 test('get tags', async function() {
   const tags = await getTags({ cwd: projectBase });
-  console.log('tags', tags);
   expect(tags.includes('v0.2.0')).toBe(true);
 });
