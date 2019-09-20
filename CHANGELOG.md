@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/vivaxy/git/compare/v0.2.0...v1.0.0) (2019-09-20)
+
+
+### Features
+
+* **commit:** get-previous-commit ([181a6a5](https://github.com/vivaxy/git/commit/181a6a5))
+* **tag:** get-tags ([a57cfa8](https://github.com/vivaxy/git/commit/a57cfa8))
+
 ## [0.2.0](https://github.com/vivaxy/git/compare/v0.1.8...v0.2.0) (2019-09-20)
 
 
