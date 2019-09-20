@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/vivaxy/git/compare/v0.1.7...v0.1.8) (2019-09-20)
+
+
+### Features
+
+* **status:** :sparkles: getHeadCommit ([ace9c05](https://github.com/vivaxy/git/commit/ace9c05))
+* **tag/get-last-tag:** :sparkles: Support setting from to get last tag ([25c773f](https://github.com/vivaxy/git/commit/25c773f))
+
 ### [0.1.7](https://github.com/vivaxy/git/compare/v0.1.6...v0.1.7) (2019-08-01)
 
 
