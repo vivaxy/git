@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/vivaxy/git/compare/v0.1.8...v0.2.0) (2019-09-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tag/get-last-tag:** 3 args to 1 arg
+
+### Features
+
+* **tag/get-last-tag:** :sparkles: add default value to match ([d236e91](https://github.com/vivaxy/git/commit/d236e91))
+
 ### [0.1.8](https://github.com/vivaxy/git/compare/v0.1.7...v0.1.8) (2019-09-20)
 
 
