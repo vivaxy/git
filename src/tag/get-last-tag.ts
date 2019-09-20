@@ -4,11 +4,15 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function getLastTag(
-  match: string,
-  from: string = 'HEAD',
-  { cwd }: { cwd: string },
-): Promise<string> {
+export default async function getLastTag({
+  match = '*',
+  from = 'HEAD',
+  cwd,
+}: {
+  match?: string;
+  from?: string;
+  cwd: string;
+}): Promise<string> {
   try {
     const { stdout } = await betterExeca(
       'git',
