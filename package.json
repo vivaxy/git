@@ -1,7 +1,11 @@
 {
   "name": "@vivaxy/git",
   "version": "1.1.1",
-  "description": "Created by create-n",
+  "description": "💭Git operations.",
+  "keywords": [
+    "vivaxy",
+    "git"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.js",
   "scripts": {
