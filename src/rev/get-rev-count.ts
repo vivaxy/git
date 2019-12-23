@@ -7,7 +7,7 @@ import { betterExeca } from '../helpers';
 export default async function getRevCount({
   from,
   to = 'HEAD',
-  paths = '',
+  paths = '.',
   cwd,
 }: {
   from: string;
