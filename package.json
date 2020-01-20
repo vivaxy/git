@@ -1,10 +1,12 @@
 {
   "name": "@vivaxy/git",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "💭Git operations.",
   "keywords": [
-    "vivaxy",
-    "git"
+    "git",
+    "node",
+    "npm",
+    "node.js"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.js",
@@ -58,12 +60,6 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   },
-  "keywords": [
-    "git",
-    "node",
-    "npm",
-    "node.js"
-  ],
   "dependencies": {
     "@types/fs-extra": "^8.0.0",
     "execa": "^2.0.3",
