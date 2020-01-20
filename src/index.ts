@@ -6,7 +6,7 @@ export * from './init';
 export * from './fetch';
 export * from './push';
 export * from './remote';
-export * from './rev';
+export * from './rev-list';
 export * from './status';
 export * from './submodules';
 export * from './tag';
