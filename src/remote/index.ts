@@ -5,3 +5,4 @@
 export { default as getCurrentRemote } from './get-current-remote';
 export { default as getRemoteUrl } from './get-remote-url';
 export { default as getCurrentRemoteUrl } from './get-current-remote-url';
+export { default as addRemote } from './add-remote';
