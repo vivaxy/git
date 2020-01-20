@@ -7,12 +7,12 @@ import { betterExeca } from '../helpers';
 export default async function getRevCount({
   from,
   to = 'HEAD',
-  paths = '.',
+  paths = ['.'],
   cwd,
 }: {
   from: string;
   to?: string;
-  paths?: string;
+  paths?: string[];
   cwd: string;
 }): Promise<number> {
   let sha = `${from}...${to}`;
@@ -21,7 +21,7 @@ export default async function getRevCount({
   }
   const { exitCode, stdout } = await betterExeca(
     'git',
-    ['rev-list', '--count', sha, paths],
+    ['rev-list', '--count', sha, '--', paths.join(' ')],
     { cwd },
   );
   if (exitCode === 0) {
