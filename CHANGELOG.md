@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/vivaxy/git/compare/v1.3.0...v2.0.0) (2020-01-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **get-rev-count:** The type of `paths` is changed from `string` to `string[]`
+
+### Features
+
+* **get-rev-count:** :sparkles: support paths as an array ([62892a3](https://github.com/vivaxy/git/commit/62892a3))
+
 ## [1.3.0](https://github.com/vivaxy/git/compare/v1.2.0...v1.3.0) (2020-01-20)
 
 
