@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/vivaxy/git/compare/v2.0.1...v2.1.0) (2020-01-21)
+
+
+### Features
+
+* **config:** :sparkles: add `git.setUserName` and `git.setUserEmail` ([8b8e374](https://github.com/vivaxy/git/commit/8b8e374))
+
 ### [2.0.1](https://github.com/vivaxy/git/compare/v2.0.0...v2.0.1) (2020-01-20)
 
 ## [2.0.0](https://github.com/vivaxy/git/compare/v1.3.0...v2.0.0) (2020-01-20)
