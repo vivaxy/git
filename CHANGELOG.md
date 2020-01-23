@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.1](https://github.com/vivaxy/git/compare/v2.2.0...v2.2.1) (2020-01-23)
+
+
+### Bug Fixes
+
+* **ls:** :bug: fix `ls-files` not exported ([d8d41dd](https://github.com/vivaxy/git/commit/d8d41dd))
+
 ## [2.2.0](https://github.com/vivaxy/git/compare/v2.1.0...v2.2.0) (2020-01-23)
 
 
