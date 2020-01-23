@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/vivaxy/git/compare/v2.1.0...v2.2.0) (2020-01-23)
+
+
+### Features
+
+* **ignore:** :sparkles: add `checkIgnore` ([7e3f62a](https://github.com/vivaxy/git/commit/7e3f62a))
+* **ls:** :sparkles: add `ls-files` ([d963326](https://github.com/vivaxy/git/commit/d963326))
+
 ## [2.1.0](https://github.com/vivaxy/git/compare/v2.0.1...v2.1.0) (2020-01-21)
 
 
