@@ -4,6 +4,7 @@ export * from './commit';
 export * from './config';
 export * from './ignore';
 export * from './init';
+export * from './ls';
 export * from './fetch';
 export * from './push';
 export * from './remote';
