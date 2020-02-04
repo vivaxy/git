@@ -4,11 +4,18 @@
  */
 import { betterExeca } from '../helpers';
 export default async function checkoutBranch({
-  cwd,
   branch,
+  create,
+  cwd,
 }: {
-  cwd: string;
   branch: string;
+  create: boolean;
+  cwd: string;
 }) {
-  await betterExeca('git', ['checkout', '-b', branch], { cwd });
+  let params = ['checkout'];
+  if (create) {
+    params.push('-b');
+  }
+  params.push(branch);
+  await betterExeca('git', params, { cwd });
 }
