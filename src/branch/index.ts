@@ -3,3 +3,4 @@
  * @author vivaxy
  */
 export { default as getCurrentBranch } from './get-current-branch';
+export { default as checkoutBranch } from './checkout-branch';
