@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/vivaxy/git/compare/v2.3.0...v2.4.0) (2020-02-04)
+
+
+### Features
+
+* **branch:** :sparkles:  add `create` option to `checkoutBranch` ([c3121cc](https://github.com/vivaxy/git/commit/c3121cc))
+
 ## [2.3.0](https://github.com/vivaxy/git/compare/v2.2.1...v2.3.0) (2020-02-04)
 
 
