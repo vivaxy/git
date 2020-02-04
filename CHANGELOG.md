@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/vivaxy/git/compare/v2.5.0...v3.0.0) (2020-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tag:** remove `getTagByRev`
+
+### Features
+
+* **commit:** :sparkles:  add `getCommitByTag` ([2d8ecc3](https://github.com/vivaxy/git/commit/2d8ecc3))
+* **tag:** :sparkles:  remove `getTagByRev` ([6d1a643](https://github.com/vivaxy/git/commit/6d1a643))
+
 ## [2.5.0](https://github.com/vivaxy/git/compare/v2.4.0...v2.5.0) (2020-02-04)
 
 
