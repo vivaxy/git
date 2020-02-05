@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should get all commit info 1`] = `
+exports[`should get all commits 1`] = `
 Array [
   Object {
     "date": 1579502284000,
@@ -40,12 +40,7 @@ Array [
   },
   Object {
     "date": 1577583012000,
-    "files": Array [
-      Object {
-        "diffType": "",
-        "filename": undefined,
-      },
-    ],
+    "files": Array [],
     "hash": "68727e0ec0817e6697465ac97481eb8c46c5b7f3",
     "message": "chore(deps): bump handlebars from 4.1.2 to 4.5.3 (#4)
 
@@ -57,7 +52,7 @@ chore(deps): bump handlebars from 4.1.2 to 4.5.3",
     "files": Array [
       Object {
         "diffType": "M",
-        "filename": "yarn.loc",
+        "filename": "yarn.lock",
       },
     ],
     "hash": "2577f00d72a5e9c5b739923a18195438e4ee6d73",
@@ -70,6 +65,122 @@ Bumps [handlebars](https://github.com/wycats/handlebars.js) from 4.1.2 to 4.5.3.
 
 Signed-off-by: dependabot[bot] <support@github.com>",
     "tags": Array [],
+  },
+]
+`;
+
+exports[`should get commits with paths 1`] = `
+Array [
+  Object {
+    "date": 1564533329000,
+    "files": Array [
+      Object {
+        "diffType": "M",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "c98d8af0a5b7bc60c481560d1062540d5541719d",
+    "message": "refactor(rename): :recycle: rename package from git-info to git
+",
+    "tags": Array [],
+  },
+  Object {
+    "date": 1564533134000,
+    "files": Array [
+      Object {
+        "diffType": "M",
+        "filename": "LICENSE",
+      },
+      Object {
+        "diffType": "M",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "e48e65f2b6b6cca868fe26a37c36f4fd39801d1f",
+    "message": "refactor(reinit): :recycle: init
+",
+    "tags": Array [],
+  },
+  Object {
+    "date": 1493120713000,
+    "files": Array [
+      Object {
+        "diffType": "M",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "ca9b2da1cf72102d24fa931d975f76457fa8ce7d",
+    "message": "feat(DEPRECATED): :sparkles:
+",
+    "tags": Array [],
+  },
+  Object {
+    "date": 1491913173000,
+    "files": Array [
+      Object {
+        "diffType": "M",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "0c56c9c84ed492409871f2efceabd919856af10f",
+    "message": "docs(README.md): :memo:
+",
+    "tags": Array [],
+  },
+  Object {
+    "date": 1491912947000,
+    "files": Array [
+      Object {
+        "diffType": "M",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "98657405ee43106ecfcdd2a2cf1b4a79ae6e62dd",
+    "message": "feat: :tada:First Commit
+",
+    "tags": Array [],
+  },
+  Object {
+    "date": 1491912645000,
+    "files": Array [
+      Object {
+        "diffType": "A",
+        "filename": "LICENSE",
+      },
+      Object {
+        "diffType": "A",
+        "filename": "README.md",
+      },
+    ],
+    "hash": "85c03262afbaf774d45bc9a951bc22445458ccb4",
+    "message": "Initial commit",
+    "tags": Array [],
+  },
+]
+`;
+
+exports[`should get multiple tags 1`] = `
+Array [
+  Object {
+    "date": 1491913097000,
+    "files": Array [
+      Object {
+        "diffType": "A",
+        "filename": "CHANGELOG.md",
+      },
+      Object {
+        "diffType": "M",
+        "filename": "package.json",
+      },
+    ],
+    "hash": "ebc8de109e22a4546b378bdd90513c686e3a695a",
+    "message": "chore(release): 0.1.0
+",
+    "tags": Array [
+      "v0.1.0",
+      "lightweight-tag-1",
+      "annotated-tag-1",
+    ],
   },
 ]
 `;

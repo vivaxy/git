@@ -17,10 +17,6 @@ export interface Commit {
   files: FileStatus[];
 }
 
-function filterEmptyString(input: string) {
-  return !!input;
-}
-
 function parseCommits(input: string): Commit {
   const ret: Partial<Commit> = {};
   const fieldsParsers = {
@@ -49,8 +45,9 @@ function parseCommits(input: string): Commit {
     files(input: string) {
       // remove `\n` and `\n`
       return input
-        .slice(1, -1)
+        .slice(1)
         .split('\n')
+        .filter(Boolean)
         .map(function(line) {
           const sec = line.split('\t');
           return {
@@ -121,7 +118,7 @@ export default async function getCommits({
   if (exitCode === 0) {
     return stdout
       .split(DELIMETER)
-      .filter(filterEmptyString)
+      .filter(Boolean)
       .map(parseCommits);
   }
   return ret;
