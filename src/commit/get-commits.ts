@@ -111,15 +111,17 @@ export default async function getCommits({
   if (noMerges) {
     args.push('--no-merges');
   }
-  const { exitCode, stdout } = await betterExeca('git', args, {
-    cwd,
-  });
   const ret: Commit[] = [];
-  if (exitCode === 0) {
-    return stdout
-      .split(DELIMETER)
-      .filter(Boolean)
-      .map(parseCommits);
-  }
+  try {
+    const { exitCode, stdout } = await betterExeca('git', args, {
+      cwd,
+    });
+    if (exitCode === 0) {
+      return stdout
+        .split(DELIMETER)
+        .filter(Boolean)
+        .map(parseCommits);
+    }
+  } catch (e) {}
   return ret;
 }
