@@ -4,4 +4,5 @@
  */
 export { default as commit } from './commit';
 export { default as getCommitByTag } from './get-commit-by-tag';
+export { default as getCommits } from './get-commits';
 export { default as getPreviousCommit } from './get-previous-commit';
