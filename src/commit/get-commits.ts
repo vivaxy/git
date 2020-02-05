@@ -12,7 +12,7 @@ export interface FileStatus {
 export interface Commit {
   message: string;
   hash: string;
-  tags: string;
+  tags: string[];
   date: number;
   files: FileStatus[];
 }
