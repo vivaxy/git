@@ -88,14 +88,14 @@ function parseCommits(input: string): Commit {
 }
 
 export default async function getCommits({
-  from,
-  to,
+  from = '',
+  to = 'HEAD',
   paths,
   noMerges = false,
   cwd,
 }: {
-  from: string;
-  to: string;
+  from?: string;
+  to?: string;
   paths?: string[];
   noMerges?: boolean;
   cwd: string;
@@ -106,8 +106,8 @@ export default async function getCommits({
     'log',
     `--format=${DELIMETER}%n-message-%n%B%n-hash-%n%H%n-tags-%n%d%n-date-%n%ci%n-files-`,
     '--name-status',
-    `${from}..${to}`,
   ];
+  args.push([from, to].filter(Boolean).join('..'));
   if (paths && paths.length) {
     args.push('--', ...paths);
   }
