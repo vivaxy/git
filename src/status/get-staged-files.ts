@@ -17,7 +17,7 @@ export default async function getStagedFiles({
   );
   return stdout
     .split('\n')
-    .slice(1)
+    .filter(Boolean)
     .map(function(line) {
       const sec = line.split('\t');
       return {
