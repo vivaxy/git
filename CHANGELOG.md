@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/vivaxy/git/compare/v3.1.1...v3.2.0) (2020-02-19)
+
+
+### Features
+
+* **get-rev-count:** :sparkles:  add `leftOnly` option ([8b99fdd](https://github.com/vivaxy/git/commit/8b99fdd))
+
 ### [3.1.1](https://github.com/vivaxy/git/compare/v3.1.0...v3.1.1) (2020-02-05)
 
 
