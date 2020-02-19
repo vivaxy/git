@@ -3,11 +3,7 @@
  * @author vivaxy
  */
 import betterExeca from '../helpers/better-execa';
-
-export interface FileStatus {
-  filename: string;
-  diffType: 'A' | 'C' | 'D' | 'M' | 'R' | 'T' | 'U' | 'X' | 'B';
-}
+import { FileStatus } from '../helpers/types';
 
 export interface Commit {
   message: string;

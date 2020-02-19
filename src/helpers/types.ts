@@ -9,3 +9,8 @@ export type Stdio =
   | 'ignore'
   | 'inherit'
   | readonly execa.StdioOption[];
+
+export interface FileStatus {
+  filename: string;
+  diffType: 'A' | 'C' | 'D' | 'M' | 'R' | 'T' | 'U' | 'X' | 'B';
+}
