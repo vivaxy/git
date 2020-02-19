@@ -8,7 +8,10 @@ import getRemoteUrl from '../get-remote-url';
 const projectPath = path.join(__dirname, '..', '..', '..');
 
 test('get remote url', async function() {
-  expect(await getRemoteUrl({ cwd: projectPath, remote: 'origin' })).toBe(
-    'https://github.com/vivaxy/git.git',
-  );
+  expect(
+    [
+      'https://github.com/vivaxy/git.git',
+      'git@github.com:vivaxy/git.git',
+    ].includes(await getRemoteUrl({ cwd: projectPath, remote: 'origin' })),
+  ).toBe(true);
 });
