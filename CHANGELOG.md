@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.1](https://github.com/vivaxy/git/compare/v3.3.0...v3.3.1) (2020-02-19)
+
+
+### Bug Fixes
+
+* **get-staged-files:** :bug:  fix staged files not listed ([f1c590f](https://github.com/vivaxy/git/commit/f1c590f))
+
 ## [3.3.0](https://github.com/vivaxy/git/compare/v3.2.0...v3.3.0) (2020-02-19)
 
 
