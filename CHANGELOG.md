@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/vivaxy/git/compare/v3.2.0...v3.3.0) (2020-02-19)
+
+
+### Features
+
+* **get-staged-files:** :sparkles:  add `get-staged-files` ([60a65d1](https://github.com/vivaxy/git/commit/60a65d1))
+
 ## [3.2.0](https://github.com/vivaxy/git/compare/v3.1.1...v3.2.0) (2020-02-19)
 
 
