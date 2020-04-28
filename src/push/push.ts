@@ -7,9 +7,13 @@ import { getCurrentRemote } from '../remote';
 import { Stdio, betterExeca } from '../helpers';
 
 export default async function push({
+  setUpstream = false,
+  followTags = false,
   cwd,
   stdio = 'inherit',
 }: {
+  setUpstream: boolean;
+  followTags: boolean;
   cwd: string;
   stdio?: Stdio;
 }) {
@@ -21,7 +25,15 @@ export default async function push({
   if (!remote) {
     throw new Error('Invalid remote');
   }
-  await betterExeca('git', ['push', remote, branch, '--follow-tags'], {
+  const args = ['push'];
+  if (setUpstream) {
+    args.push('--set-upstream');
+  }
+  args.push(remote, branch);
+  if (followTags) {
+    args.push('--follow-tags');
+  }
+  await betterExeca('git', args, {
     stdio,
     cwd,
   });
