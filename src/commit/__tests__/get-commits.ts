@@ -15,20 +15,3 @@ test('should get all commits', async function() {
   });
   expect(commits).toMatchSnapshot();
 });
-
-test('should get commits with paths', async function() {
-  const commits = await getCommits({
-    cwd,
-    paths: ['README.md', 'LICENSE'],
-  });
-  expect(commits).toMatchSnapshot();
-});
-
-test('should get multiple tags', async function() {
-  const commits = await getCommits({
-    cwd,
-    from: '99f0407c99a7bbcd5ad1c194810fe14092e57da3',
-    to: 'ebc8de109e22a4546b378bdd90513c686e3a695a',
-  });
-  expect(commits).toMatchSnapshot();
-});

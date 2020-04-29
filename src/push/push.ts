@@ -7,14 +7,14 @@ import { getCurrentRemote } from '../remote';
 import { Stdio, betterExeca } from '../helpers';
 
 export default async function push({
+  cwd,
   setUpstream = false,
   followTags = false,
-  cwd,
   stdio = 'inherit',
 }: {
-  setUpstream: boolean;
-  followTags: boolean;
   cwd: string;
+  setUpstream?: boolean;
+  followTags?: boolean;
   stdio?: Stdio;
 }) {
   const branch = await getCurrentBranch({ cwd });
