@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/vivaxy/git/compare/v4.0.1...v4.1.0) (2020-05-05)
+
+
+### Features
+
+* **status:** :sparkles: add `getRootPath` ([3ecc3ae](https://github.com/vivaxy/git/commit/3ecc3ae))
+* **status:** :sparkles: add `isInsideWorkTree` ([ab0f95c](https://github.com/vivaxy/git/commit/ab0f95c))
+
 ### [4.0.1](https://github.com/vivaxy/git/compare/v4.0.0...v4.0.1) (2020-04-29)
 
 
