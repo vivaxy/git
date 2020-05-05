@@ -3,4 +3,5 @@ node_js:
   - "node"
   - "lts/*"
 after_success:
-  - npm run coverage && bash <(curl -s https://codecov.io/bash)
+  - git checkout master && git pull origin master && npm run coverage && bash
+    <(curl -s https://codecov.io/bash)
