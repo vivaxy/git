@@ -4,23 +4,18 @@
  */
 import * as path from 'path';
 import * as fse from 'fs-extra';
-import { betterExeca } from '../helpers';
+import isInsideWorkTree from './is-inside-work-tree';
 
 export default async function isRepositoryRoot({
   cwd,
 }: {
   cwd: string;
 }): Promise<boolean> {
-  const gitExists = await fse.pathExists(path.join(cwd, '.git'));
-  if (gitExists) {
-    const { stdout } = await betterExeca(
-      'git',
-      ['rev-parse', '--is-inside-work-tree'],
-      { cwd },
-    );
-    if (stdout === 'true') {
-      return true;
-    }
+  if (
+    (await fse.pathExists(path.join(cwd, '.git'))) &&
+    (await isInsideWorkTree({ cwd }))
+  ) {
+    return true;
   }
   return false;
 }
