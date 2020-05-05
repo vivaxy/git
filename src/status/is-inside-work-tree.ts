@@ -16,6 +16,7 @@ export default async function isInsideWorkTree({
       { cwd },
     );
     return stdout === 'true';
-  } catch (e) {}
-  return false;
+  } catch (ex) {
+    return false;
+  }
 }
