@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "node"
   - "lts/*"
+before_script:
+  - git fetch --unshallow
 after_success:
-  - git checkout master && git pull origin master && npm run coverage && bash
-    <(curl -s https://codecov.io/bash)
+  - npm run coverage && bash <(curl -s https://codecov.io/bash)
