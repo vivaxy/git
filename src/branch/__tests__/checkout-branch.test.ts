@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 import checkoutBranch from '../checkout-branch';
-import createProject from '../../__tests__/helpers/project';
+import createProject from '../../__tests__/helpers/create-project';
 
 test('checkout branch', async function() {
   const project = await createProject();

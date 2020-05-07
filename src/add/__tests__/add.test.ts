@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 import add from '../add';
-import createProject from '../../__tests__/helpers/project';
+import createProject from '../../__tests__/helpers/create-project';
 
 test('add', async function() {
   const project = await createProject();

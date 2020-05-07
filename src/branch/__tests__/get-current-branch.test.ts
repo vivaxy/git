@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 import getCurrentBranch from '../get-current-branch';
-import createProject from '../../__tests__/helpers/project';
+import createProject from '../../__tests__/helpers/create-project';
 
 test('get current branch', async function() {
   const project = await createProject();
