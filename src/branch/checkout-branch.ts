@@ -5,11 +5,11 @@
 import { betterExeca } from '../helpers';
 export default async function checkoutBranch({
   branch,
-  create,
+  create = false,
   cwd,
 }: {
   branch: string;
-  create: boolean;
+  create?: boolean;
   cwd: string;
 }) {
   let params = ['checkout'];
