@@ -8,6 +8,10 @@ import add from '../../add/add';
 import init from '../../init/init';
 import lsFiles from '../../ls/ls-files';
 import commit from '../../commit/commit';
+import getUserName from '../../config/get-user-name';
+import getUserEmail from '../../config/get-user-email';
+import setUserName from '../../config/set-user-name';
+import setUserEmail from '../../config/set-user-email';
 import getCurrentBranch from '../../branch/get-current-branch';
 import callsites = require('callsites');
 
@@ -57,6 +61,22 @@ export default async function createProject({
     await commit('new commit for testcases', { cwd: workingDirectoryPath });
   }
 
+  async function gitGetUserName() {
+    return await getUserName({ cwd: workingDirectoryPath });
+  }
+
+  async function gitGetUserEmail() {
+    return await getUserEmail({ cwd: workingDirectoryPath });
+  }
+
+  async function gitSetUserName(userName: string) {
+    await setUserName(userName, { cwd: workingDirectoryPath });
+  }
+
+  async function gitSetUserEmail(userEmail: string) {
+    await setUserEmail(userEmail, { cwd: workingDirectoryPath });
+  }
+
   return {
     workingDirectoryPath,
     dispose,
@@ -65,5 +85,9 @@ export default async function createProject({
     gitLsFiles,
     gitGetCurrentBranch,
     gitCreateNewCommit,
+    gitGetUserName,
+    gitGetUserEmail,
+    gitSetUserName,
+    gitSetUserEmail,
   };
 }
