@@ -11,4 +11,5 @@ test('get user email', async function() {
   await project.gitSetUserEmail(email);
   const actualEmail = await getUserEmail({ cwd: project.workingDirectoryPath });
   expect(actualEmail).toBe(email);
+  await project.dispose();
 });

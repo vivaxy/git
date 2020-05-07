@@ -11,4 +11,5 @@ test('get user name', async function() {
   await project.gitSetUserName(name);
   const actualName = await getUserName({ cwd: project.workingDirectoryPath });
   expect(actualName).toBe(name);
+  await project.dispose();
 });
