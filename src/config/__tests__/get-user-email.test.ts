@@ -7,9 +7,11 @@ import createProject from '../../__tests__/helpers/create-project';
 
 test('get user email', async function() {
   const project = await createProject();
+  const originalEmail = await project.gitGetUserEmail();
   const email = 'a@b.c';
   await project.gitSetUserEmail(email);
   const actualEmail = await getUserEmail({ cwd: project.workingDirectoryPath });
   expect(actualEmail).toBe(email);
+  await project.gitSetUserEmail(originalEmail);
   await project.dispose();
 });
