@@ -5,6 +5,7 @@
     "add",
     "branch",
     "commit",
-    "config"
+    "config",
+    "tag"
   ]
 }

@@ -19,7 +19,7 @@ export default async function getTags({
       ['tag', '--list', match, `--sort=${sort}`],
       { cwd },
     );
-    return stdout.split('\n');
+    return stdout.split('\n').filter(Boolean);
   } catch (e) {
     return [];
   }
