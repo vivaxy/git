@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.2](https://github.com/vivaxy/git/compare/v4.1.1...v4.1.2) (2020-06-18)
+
+
+### Bug Fixes
+
+* **tag:** :bug: fix get-tags get empty result ([e4dc2d1](https://github.com/vivaxy/git/commit/e4dc2d170ea9a4fd6bb9e5fc20f4e7d398d7614c))
+
 ### [4.1.1](https://github.com/vivaxy/git/compare/v4.1.0...v4.1.1) (2020-05-05)
 
 ## [4.1.0](https://github.com/vivaxy/git/compare/v4.0.1...v4.1.0) (2020-05-05)
