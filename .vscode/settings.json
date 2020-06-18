@@ -6,6 +6,7 @@
     "branch",
     "commit",
     "config",
-    "tag"
+    "tag",
+    "rev-list"
   ]
 }

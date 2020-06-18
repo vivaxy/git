@@ -13,7 +13,7 @@ export default async function getRevCount({
 }: {
   from?: string;
   to?: string;
-  leftOnly: boolean;
+  leftOnly?: boolean;
   paths?: string[];
   cwd: string;
 }): Promise<number> {
