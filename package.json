@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@types/fs-extra": "^9.0.0",
-    "execa": "^4.0.0",
+    "execa": "^5.0.0",
     "fs-extra": "^9.0.0"
   }
 }
