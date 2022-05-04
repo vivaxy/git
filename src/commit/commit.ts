@@ -6,7 +6,11 @@ import { Stdio, betterExeca } from '../helpers';
 
 export default async function commit(
   message: string,
-  { cwd, stdio = 'inherit' }: { cwd: string; stdio?: Stdio },
+  { cwd, noVerify = false, stdio = 'inherit' }: { cwd: string; noVerify?: boolean; stdio?: Stdio; },
 ): Promise<void> {
-  await betterExeca('git', ['commit', '-m', message], { stdio, cwd });
+  const args = ['commit', '-m', message];
+  if (noVerify) {
+    args.push('--no-verify')
+  }
+  await betterExeca('git', args, { stdio, cwd });
 }
