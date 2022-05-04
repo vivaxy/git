@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/vivaxy/git/compare/v4.1.3...v4.2.0) (2022-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([d76adac](https://github.com/vivaxy/git/commit/d76adac))
+* **deps:** update dependency fs-extra to v10 ([6b8a9fe](https://github.com/vivaxy/git/commit/6b8a9fe))
+
+
+### Features
+
+* add --no-verify to commit and push ([fe93e15](https://github.com/vivaxy/git/commit/fe93e15))
+
 ### [4.1.3](https://github.com/vivaxy/git/compare/v4.1.2...v4.1.3) (2020-06-18)
 
 
