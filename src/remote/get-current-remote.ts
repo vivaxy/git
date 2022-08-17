@@ -9,9 +9,13 @@ export default async function getCurrentRemote({
 }: {
   cwd: string;
 }): Promise<string> {
-  const { exitCode, stdout } = await betterExeca('git', ['remote'], { cwd });
+  const { exitCode, stdout } = await betterExeca(
+    'git',
+    ['rev-parse', '--symbolic-full-name', '--abbrev-ref', '@{u}'],
+    { cwd },
+  );
   if (exitCode === 0) {
-    return stdout;
+    return stdout.split('/')[0];
   }
   return '';
 }
