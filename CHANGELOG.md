@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.2.1](https://github.com/vivaxy/git/compare/v4.2.0...v4.2.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* get-current-remote shows all remotes ([c72402e](https://github.com/vivaxy/git/commit/c72402e2f7033a7a4342feec026817475657b7d8)), closes [#47](https://github.com/vivaxy/git/issues/47)
+* node version ([054f574](https://github.com/vivaxy/git/commit/054f5743f140841a2fe9a37db512e8be28270962))
+
 ## [4.2.0](https://github.com/vivaxy/git/compare/v4.1.3...v4.2.0) (2022-05-04)
 
 
