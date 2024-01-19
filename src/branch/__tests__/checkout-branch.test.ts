@@ -5,11 +5,11 @@
 import checkoutBranch from '../checkout-branch';
 import createProject from '../../__tests__/helpers/create-project';
 
-test('checkout branch', async function() {
+test('checkout branch', async function () {
   const project = await createProject();
   await project.gitInit();
   const branchName = 'test';
-  const masterBranchName = 'master';
+  const masterBranchName = 'main';
   await project.gitCreateNewCommit();
   await checkoutBranch({
     cwd: project.workingDirectoryPath,
@@ -26,7 +26,7 @@ test('checkout branch', async function() {
   await project.dispose();
 });
 
-test('checkout new branch', async function() {
+test('checkout new branch', async function () {
   const project = await createProject({ key: 'create' });
   await project.gitInit();
   const branchName = 'test';

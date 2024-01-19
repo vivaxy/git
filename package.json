@@ -10,6 +10,7 @@
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.js",
+  "packageManager": "yarn@3.6.4",
   "scripts": {
     "build": "rm -rf lib && tsc",
     "test": "jest",
