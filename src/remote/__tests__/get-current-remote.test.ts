@@ -2,6 +2,7 @@
  * @since 2019-06-28 10:17
  * @author vivaxy
  */
+import { expect, test } from 'vitest';
 import * as path from 'path';
 import getCurrentRemote from '../get-current-remote';
 import { betterExeca } from '../../helpers';

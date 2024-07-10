@@ -2,7 +2,7 @@
  * @since 2019-07-25 16:10
  * @author vivaxy
  */
-import * as execa from 'execa';
+import { execa } from 'execa';
 import { Stdio } from './types';
 
 export default async function betterExeca(
@@ -21,7 +21,11 @@ export default async function betterExeca(
     stdio,
   });
   if (childProcess.exitCode !== 0) {
-    throw new Error(childProcess.stderr);
+    throw new Error(
+      `${childProcess.stderr}, command=${bin} ${commands.join(
+        ' ',
+      )}, cwd=${cwd}, shell=${shell}, stdio=${stdio}`,
+    );
   }
   return childProcess;
 }

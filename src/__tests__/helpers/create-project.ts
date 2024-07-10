@@ -23,7 +23,7 @@ export default async function createProject({
     throw new Error('Invalid filename');
   }
   const dirPath = path.dirname(filePath);
-  const basename = path.basename(filePath, '.ts');
+  const basename = path.basename(filePath, '.ts').replace(/\./, '-');
   const workingDirectoryPath = path.join(
     dirPath,
     'working-directory',
