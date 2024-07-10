@@ -16,5 +16,5 @@ export default async function getUserName(
       cwd,
     },
   );
-  return stdout;
+  return stdout as string;
 }
