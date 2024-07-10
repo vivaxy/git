@@ -9,7 +9,7 @@
 
 # Install
 
-`yarn add @vivaxy/git` or `npm i @vivaxy/git --save`
+`npm i --save @vivaxy/git`
 
 # Usage
 
