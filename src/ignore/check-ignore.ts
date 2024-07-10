@@ -6,7 +6,9 @@ import { betterExeca } from '../helpers';
 
 export default async function checkIgnore(
   paths: string[],
-  { cwd }: { cwd: string },
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
 ) {
   const { stdout } = await betterExeca('git', ['check-ignore', ...paths], {
     cwd,

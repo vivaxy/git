@@ -7,7 +7,9 @@ import { betterExeca } from '../helpers';
 export default async function addRemote(
   shortname: string,
   url: string,
-  { cwd }: { cwd: string },
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
 ) {
   await betterExeca('git', ['remote', 'add', shortname, url], { cwd });
 }

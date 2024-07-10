@@ -9,7 +9,13 @@ export default async function addTags(
     tag: string;
     message: string;
   }[],
-  { cwd, stdio = 'inherit' }: { cwd: string; stdio?: Stdio },
+  {
+    cwd = process.cwd(),
+    stdio = 'inherit',
+  }: { cwd?: string; stdio?: Stdio } = {
+    cwd: process.cwd(),
+    stdio: 'inherit',
+  },
 ) {
   for (const { tag, message } of tags) {
     await betterExeca('git', ['tag', tag, '-m', message], { stdio, cwd });

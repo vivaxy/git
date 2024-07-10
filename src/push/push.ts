@@ -6,19 +6,27 @@ import { getCurrentBranch } from '../branch';
 import { getCurrentRemote } from '../remote';
 import { Stdio, betterExeca } from '../helpers';
 
-export default async function push({
-  cwd,
-  followTags = false,
-  setUpstream = false,
-  noVerify = false,
-  stdio = 'inherit',
-}: {
-  cwd: string;
-  followTags?: boolean;
-  setUpstream?: boolean;
-  noVerify?: boolean;
-  stdio?: Stdio;
-}) {
+export default async function push(
+  {
+    cwd = process.cwd(),
+    followTags = false,
+    setUpstream = false,
+    noVerify = false,
+    stdio = 'inherit',
+  }: {
+    cwd?: string;
+    followTags?: boolean;
+    setUpstream?: boolean;
+    noVerify?: boolean;
+    stdio?: Stdio;
+  } = {
+    cwd: process.cwd(),
+    followTags: false,
+    setUpstream: false,
+    noVerify: false,
+    stdio: 'inherit',
+  },
+) {
   const branch = await getCurrentBranch({ cwd });
   if (!branch) {
     throw new Error('Invalid branch');

@@ -6,11 +6,11 @@ import { betterExeca } from '../helpers';
 export default async function checkoutBranch({
   branch,
   create = false,
-  cwd,
+  cwd = process.cwd(),
 }: {
   branch: string;
   create?: boolean;
-  cwd: string;
+  cwd?: string;
 }) {
   let params = ['checkout'];
   if (create) {

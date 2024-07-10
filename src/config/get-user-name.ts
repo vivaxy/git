@@ -4,7 +4,11 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function getUserName({ cwd }: { cwd: string }) {
+export default async function getUserName(
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
+) {
   const { stdout } = await betterExeca(
     'git',
     ['config', '--get', 'user.name'],

@@ -4,11 +4,15 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function isInsideWorkTree({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<boolean> {
+export default async function isInsideWorkTree(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<boolean> {
   try {
     const { stdout } = await betterExeca(
       'git',

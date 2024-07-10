@@ -4,7 +4,11 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function getRootPath({ cwd }: { cwd: string }) {
+export default async function getRootPath(
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
+) {
   try {
     const { stdout } = await betterExeca(
       'git',
