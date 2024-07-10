@@ -13,7 +13,10 @@ export default async function betterExeca(
     shell = false,
     stdio,
   }: { cwd?: string; shell?: boolean; stdio?: Stdio },
-) {
+): Promise<{
+  exitCode: number;
+  stdout: string;
+}> {
   const childProcess = await execa(bin, commands, {
     cwd,
     reject: false,
@@ -27,5 +30,10 @@ export default async function betterExeca(
       )}, cwd=${cwd}, shell=${shell}, stdio=${stdio}`,
     );
   }
-  return childProcess;
+  return {
+    exitCode: childProcess.exitCode,
+    stdout: Array.isArray(childProcess.stdout)
+      ? childProcess.stdout.join(', ')
+      : childProcess.stdout || '',
+  };
 }
