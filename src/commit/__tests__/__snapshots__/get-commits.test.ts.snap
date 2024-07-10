@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`should get all commits 1`] = `
-Array [
-  Object {
+[
+  {
     "date": 1579502284000,
-    "files": Array [
-      Object {
+    "files": [
+      {
         "diffType": "M",
         "filename": "CHANGELOG.md",
       },
-      Object {
+      {
         "diffType": "M",
         "filename": "package.json",
       },
@@ -17,18 +17,18 @@ Array [
     "hash": "5ea8c7e951f8d31f928e78ece3c028762adcf7b6",
     "message": "chore(release): 1.2.0
 ",
-    "tags": Array [
+    "tags": [
       "v1.2.0",
     ],
   },
-  Object {
+  {
     "date": 1579502255000,
-    "files": Array [
-      Object {
+    "files": [
+      {
         "diffType": "M",
         "filename": "src/index.ts",
       },
-      Object {
+      {
         "diffType": "A",
         "filename": "src/init/index.ts",
       },
@@ -36,21 +36,21 @@ Array [
     "hash": "8e3f52a10d45b3387f02b442c74370fcab55252d",
     "message": "feat(init): :sparkles: add \`git init\`
 ",
-    "tags": Array [],
+    "tags": [],
   },
-  Object {
+  {
     "date": 1577583012000,
-    "files": Array [],
+    "files": [],
     "hash": "68727e0ec0817e6697465ac97481eb8c46c5b7f3",
     "message": "chore(deps): bump handlebars from 4.1.2 to 4.5.3 (#4)
 
 chore(deps): bump handlebars from 4.1.2 to 4.5.3",
-    "tags": Array [],
+    "tags": [],
   },
-  Object {
+  {
     "date": 1577568329000,
-    "files": Array [
-      Object {
+    "files": [
+      {
         "diffType": "M",
         "filename": "yarn.lock",
       },
@@ -64,7 +64,7 @@ Bumps [handlebars](https://github.com/wycats/handlebars.js) from 4.1.2 to 4.5.3.
 - [Commits](https://github.com/wycats/handlebars.js/compare/v4.1.2...v4.5.3)
 
 Signed-off-by: dependabot[bot] <support@github.com>",
-    "tags": Array [],
+    "tags": [],
   },
 ]
 `;

@@ -2,10 +2,11 @@
  * @since 2020-05-06 20:09
  * @author vivaxy
  */
+import { expect, test } from 'vitest';
 import add from '../add';
 import createProject from '../../__tests__/helpers/create-project';
 
-test('add', async function() {
+test('add', async function () {
   const project = await createProject();
   const filename = 'README.md';
   await project.fileAdd(filename, '0');

@@ -2,12 +2,13 @@
  * @since 2020-06-18 17:10
  * @author vivaxy
  */
+import { expect, test } from 'vitest';
 import * as path from 'path';
 import getTags from '../get-tags';
 
 const projectBase = path.join(__dirname, '..', '..', '..');
 
-test('get tags', async function() {
+test('get tags', async function () {
   expect(
     await getTags({ match: '1234567890', cwd: projectBase }),
   ).toStrictEqual([]);

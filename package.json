@@ -13,7 +13,7 @@
   "packageManager": "npm@8.19.4",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "test": "jest",
+    "test": "vitest run",
     "coverage": "jest --collect-coverage",
     "release:beta": "yarn test && yarn build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
     "release": "yarn test && yarn build && standard-version && npm publish && git push --follow-tags",
@@ -58,16 +58,18 @@
     "@types/node": "^18.7.6",
     "callsites": "^3.1.0",
     "husky": "6",
-    "jest": "^26.0.1",
     "lint-staged": "^11.0.0",
     "pinst": "^2.1.4",
     "prettier": "^2.2.1",
     "standard-version": "^9.0.0",
-    "ts-jest": "^26.0.0",
-    "typescript": "^4.0.0"
+    "typescript": "^4.0.0",
+    "vitest": "^2.0.1"
   },
   "dependencies": {
-    "execa": "^5.0.0",
+    "execa": "^9.3.0",
     "fs-extra": "^10.1.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
