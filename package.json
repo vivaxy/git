@@ -15,8 +15,8 @@
     "build": "rm -rf lib && tsc",
     "test": "vitest run",
     "coverage": "jest --collect-coverage",
-    "release:beta": "npm test && npm run build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
-    "release": "npm test && npm run build && standard-version && npm publish && git push --follow-tags",
+    "release:beta": "npm test && npm run build && standard-version --prerelease beta && npm publish --access=public --tag beta && git push --follow-tags",
+    "release": "npm test && npm run build && standard-version && npm publish --access=public && git push --follow-tags",
     "prepare": "husky"
   },
   "repository": {

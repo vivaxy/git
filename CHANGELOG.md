@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ⚠ BREAKING CHANGES
 
-* support node.js >= 16
+* support node.js>=18
 
 ### Features
 
