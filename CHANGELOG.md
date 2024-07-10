@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/vivaxy/git/compare/v4.2.1...v5.0.0) (2024-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* support node.js >= 16
+
+### Features
+
+* add default value for cwd ([440f6fe](https://github.com/vivaxy/git/commit/440f6fe2cbb306004ee315504752b47806a72b9b))
+
+
+### Bug Fixes
+
+* fix types ([a93a68c](https://github.com/vivaxy/git/commit/a93a68c6886684169ac7ec876caeafe236b8d56e))
+
+
+* switch from jest to vitest ([b5e981d](https://github.com/vivaxy/git/commit/b5e981d10086e83c4b956c646b9f3857773eb254))
+
 ### [4.2.1](https://github.com/vivaxy/git/compare/v4.2.0...v4.2.1) (2022-08-17)
 
 
