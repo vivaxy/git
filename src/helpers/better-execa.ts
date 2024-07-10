@@ -9,10 +9,10 @@ export default async function betterExeca(
   bin: string,
   commands: string[],
   {
-    cwd,
+    cwd = process.cwd(),
     shell = false,
     stdio,
-  }: { cwd: string; shell?: boolean; stdio?: Stdio },
+  }: { cwd?: string; shell?: boolean; stdio?: Stdio },
 ) {
   const childProcess = await execa(bin, commands, {
     cwd,

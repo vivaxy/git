@@ -12,11 +12,15 @@ interface Submodule {
   url: string;
 }
 
-export default async function getAllSubmodules({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<Submodule[]> {
+export default async function getAllSubmodules(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<Submodule[]> {
   const gitModulesPath = path.join(cwd, '.gitmodules');
   if (!(await fse.pathExists(gitModulesPath))) {
     return [];
@@ -40,7 +44,7 @@ export default async function getAllSubmodules({
         (line = lines[lineIndex]) &&
         !line.startsWith('[submodule ')
       ) {
-        const [key, value] = line.split('=').map(function(s) {
+        const [key, value] = line.split('=').map(function (s) {
           return s.trim();
         });
         if (key === 'path' || key === 'url') {

@@ -5,11 +5,15 @@
 import { betterExeca } from '../helpers';
 import { FileStatus } from '../helpers/types';
 
-export default async function getStagedFiles({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<FileStatus[]> {
+export default async function getStagedFiles(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<FileStatus[]> {
   const { stdout } = await betterExeca(
     'git',
     ['diff', '--cached', '--name-status'],
@@ -18,7 +22,7 @@ export default async function getStagedFiles({
   return stdout
     .split('\n')
     .filter(Boolean)
-    .map(function(line) {
+    .map(function (line: string) {
       const sec = line.split('\t');
       return {
         filename: sec[1],

@@ -6,11 +6,15 @@ import * as path from 'path';
 import * as fse from 'fs-extra';
 import isInsideWorkTree from './is-inside-work-tree';
 
-export default async function isRepositoryRoot({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<boolean> {
+export default async function isRepositoryRoot(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<boolean> {
   if (
     (await fse.pathExists(path.join(cwd, '.git'))) &&
     (await isInsideWorkTree({ cwd }))

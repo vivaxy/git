@@ -4,7 +4,11 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function init({ cwd }: { cwd: string }) {
+export default async function init(
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
+) {
   await betterExeca('git', ['init'], {
     cwd,
   });

@@ -28,10 +28,10 @@ function parseCommits(input: string): Commit {
       return input
         .slice(2, -1)
         .split(', ')
-        .filter(function(str) {
+        .filter(function (str) {
           return str.startsWith(TAG_STARTING);
         })
-        .map(function(str) {
+        .map(function (str) {
           return str.slice(TAG_STARTING.length);
         });
     },
@@ -44,7 +44,7 @@ function parseCommits(input: string): Commit {
         .slice(1)
         .split('\n')
         .filter(Boolean)
-        .map(function(line) {
+        .map(function (line) {
           const sec = line.split('\t');
           return {
             filename: sec[1],
@@ -55,7 +55,7 @@ function parseCommits(input: string): Commit {
   };
   let contentStartIndex = 0;
   (Object.keys(fieldsParsers) as (keyof typeof fieldsParsers)[]).forEach(
-    function(key, index, allKeys) {
+    function (key, index, allKeys) {
       if (index === 0) {
         // first key
         const delimiter = `\n-${key}-\n`;
@@ -80,19 +80,27 @@ function parseCommits(input: string): Commit {
   return ret as Commit;
 }
 
-export default async function getCommits({
-  from = '',
-  to = 'HEAD',
-  paths,
-  noMerges = false,
-  cwd,
-}: {
-  from?: string;
-  to?: string;
-  paths?: string[];
-  noMerges?: boolean;
-  cwd: string;
-}) {
+export default async function getCommits(
+  {
+    from = '',
+    to = 'HEAD',
+    paths = [],
+    noMerges = false,
+    cwd = process.cwd(),
+  }: {
+    from?: string;
+    to?: string;
+    paths?: string[];
+    noMerges?: boolean;
+    cwd?: string;
+  } = {
+    from: '',
+    to: 'HEAD',
+    paths: [],
+    noMerges: false,
+    cwd: process.cwd(),
+  },
+) {
   const DELIMETER =
     '------------------------@vivaxy/git/getCommits------------------------';
   const args = [
@@ -113,10 +121,7 @@ export default async function getCommits({
       cwd,
     });
     if (exitCode === 0) {
-      return stdout
-        .split(DELIMETER)
-        .filter(Boolean)
-        .map(parseCommits);
+      return stdout.split(DELIMETER).filter(Boolean).map(parseCommits);
     }
   } catch (e) {}
   return ret;

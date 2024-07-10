@@ -6,10 +6,10 @@ import { betterExeca } from '../helpers';
 
 export default async function merge({
   branch,
-  cwd,
+  cwd = process.cwd(),
 }: {
   branch: string;
-  cwd: string;
+  cwd?: string;
 }) {
   await betterExeca('git', ['merge', branch], { cwd });
 }

@@ -6,10 +6,10 @@ import { betterExeca } from '../helpers';
 
 export default async function getRemoteUrl({
   remote,
-  cwd,
+  cwd = process.cwd(),
 }: {
   remote: string;
-  cwd: string;
+  cwd?: string;
 }): Promise<string> {
   const { stdout } = await betterExeca('git', ['remote', 'get-url', remote], {
     cwd,

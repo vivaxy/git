@@ -6,7 +6,9 @@ import { betterExeca } from '../helpers';
 
 export default async function setUserName(
   userName: string,
-  { cwd }: { cwd: string },
+  { cwd = process.cwd() }: { cwd?: string } = {
+    cwd: process.cwd(),
+  },
 ) {
   await betterExeca('git', ['config', 'user.name', userName], { cwd });
 }

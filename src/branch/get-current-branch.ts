@@ -4,11 +4,15 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function getCurrentBranch({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<string> {
+export default async function getCurrentBranch(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<string> {
   const { stdout } = await betterExeca(
     'git',
     ['symbolic-ref', '--short', 'HEAD'],

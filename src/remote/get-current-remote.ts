@@ -4,11 +4,15 @@
  */
 import { betterExeca } from '../helpers';
 
-export default async function getCurrentRemote({
-  cwd,
-}: {
-  cwd: string;
-}): Promise<string> {
+export default async function getCurrentRemote(
+  {
+    cwd = process.cwd(),
+  }: {
+    cwd?: string;
+  } = {
+    cwd: process.cwd(),
+  },
+): Promise<string> {
   const { exitCode, stdout } = await betterExeca(
     'git',
     ['rev-parse', '--symbolic-full-name', '--abbrev-ref', '@{u}'],

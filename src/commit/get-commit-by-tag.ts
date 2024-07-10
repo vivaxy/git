@@ -6,10 +6,10 @@ import { betterExeca } from '../helpers';
 
 export default async function getCommitByTag({
   tag,
-  cwd,
+  cwd = process.cwd(),
 }: {
   tag: string;
-  cwd: string;
+  cwd?: string;
 }) {
   try {
     const { exitCode, stdout } = await betterExeca(
